@@ -17,7 +17,7 @@ int main()
     for (int i = index; i > 0; i= i-1)
     {
         //flag.disabled
-        //printf("%d is checked... \n", i);
+        printf("%d is checked... \n", i);
 
         //critical if_statement
         if (i%a==0 || i%b==0 || i%c==0 || i%d==0 )
