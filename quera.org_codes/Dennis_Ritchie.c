@@ -1,36 +1,49 @@
-//declerations
 #include <stdio.h>
 
-
-//function
-int output(int x)
+int rem,reverse;//var for the following function
+int func(int y)//the input is passed here and gets inverted
 {
-    short int flag=1;
-    short int single_indiv = x%(flag*10);
-    printf("\n%d: ",single_indiv);
-
-    //da loop
-    for (short int i = 0; i < single_indiv; i++)
+    while (y!=0)
     {
-        printf("%d",single_indiv);
+        rem = y%10;
+        reverse = reverse*10 +rem;
+        y= y/10; 
     }
+    return reverse;    
+}//pass
 
-    flag++;
+int rich(int x )//real meat and potatoes
+{
+    int single_indiv = 0;
+    int number =func(x);
+    //printf("%d",number);//checker for the inverted value
+     
+    //the variable "number" is inverted successfuly then passed to the loop.
 
-    if ( x%(flag*10) >0 )
+    while (number)//every individual number of the integer is taken and printed with respect to its value. e.g.-->  4: 4444
     {
-        return output(x/10);
+       
+        single_indiv = number % (10);//da division
+        printf("%d: ",single_indiv);
+        //pass
+
+
+        for (int i = 0; i<single_indiv ; i++ )//the desired print.
+        {
+          printf("%d",single_indiv);
+        //pass
+        }
+        printf("\n");
+        number /= 10;
     }
-        
 }
 
-//main
-int main()
-{
-    int input_;
-    scanf("%d",&input_);
 
-    output(input_);
+int main()//driver code...   USELESSS
+{
+    int input;
+    scanf("%d",&input);
+    rich(input);
+    //printf("%d",func(x));//works perfeclty fine
     return 0;
 }
-
