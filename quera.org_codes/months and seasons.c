@@ -13,18 +13,8 @@ int function(int x )
     else if (x>6 && x<=9) return 3;
     else if (x>9 && x<=12)return 4;
     else return -1;
-    
-    
 
 }
-
-
-
-
-
-
-
-
 //main function
 int main()
 {
