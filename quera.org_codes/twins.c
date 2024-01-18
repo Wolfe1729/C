@@ -3,19 +3,19 @@
 #include <string.h>
 
 struct Pair {
-	char first[10];
-	char second[10];
+	char first[100];
+	char second[100];
 };
 
 int main(void)
 {
 	int total,i,j;
-	char temp [10];
-	char temp2[10];
-	char character, *ad ;
+	char temp [100];
+	char temp2[100];
+	char character, *ad= NULL ;
 	scanf("%d", &total);
 	
-	struct Pair pair[50] = { "0","0" };
+	struct Pair pair[500] = { "0","0" };
 
 	for (i = 0; i < total; i++)
 	{
@@ -50,6 +50,7 @@ int main(void)
 				{
 					printf("\n");
 				}
+				
 				break;}
 
 		}	if (ad != NULL)
